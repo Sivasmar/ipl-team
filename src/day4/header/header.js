@@ -1,6 +1,6 @@
 const  Header =()=>{
     return(
-        <div class="header"> 
+        <div className="header"> 
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">player</a>
@@ -9,3 +9,4 @@ const  Header =()=>{
     )
 };
 export default Header;
+

@@ -1,12 +1,13 @@
 const Footer=()=>{
     return (
         <>
-        <div class="footer">
+        <div className="footer">
             <center>
-                <span>All copy Rights by Siva</span>
+                <span className="span">All copy Rights by Siva</span>
             </center>
         </div>
         </>
     )
 }
-export default Footer;
+
+export default Footer; 

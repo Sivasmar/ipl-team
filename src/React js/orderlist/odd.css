@@ -1,0 +1,25 @@
+.sqaure-card-highlight{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(66, 224, 18);
+    margin: 10px;
+    border: 2px solid black;
+   
+
+}
+.sqaure-card-not-highlight{
+    width: 100px;
+    height: 100px;
+    background-color:rgb(24, 222, 237);
+    margin: 10px;
+    border: 2px solid black;
+    
+
+}
+
+.flex{
+
+    display: flex;
+    flex-direction: row;
+
+}

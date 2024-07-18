@@ -1,18 +1,24 @@
 // import logo from './logo.svg';
 import './App.css';
 
+import SquareComponent from './React js/orderlist/list';
+import ConditionalRendering from './React js/conditional/conditional';
+import Counter from './React js/conditional/countor';
 
-import Footer from './day4/footer/footer';
-import Card from './day4/card/card.js';
 
 
 const App = () =>{
  return (
   <div>
-   
-     {/* <Header/> */}
-    <Card/>
-    <Footer/>
+  <ConditionalRendering/>
+
+  <br/>
+  <SquareComponent/>
+ <br/>
+   <Counter/>
+
+  
+     
   
   </div>
  )

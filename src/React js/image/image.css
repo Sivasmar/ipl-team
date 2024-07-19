@@ -1,4 +1,4 @@
-       
+/*        
  .counter-container {
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
   padding: 10px 20px;
   font-size: 1em;
   cursor: pointer;
-}
+} */
 
  
  
@@ -37,7 +37,7 @@
  
  
  
- /* .header{
+ .header{
         
        background-color: #009FBD;
        
@@ -151,7 +151,7 @@
        .recipes{
        background-color: #16f4f4;
         width: 100%;
-       } */
+       }
 
 
 

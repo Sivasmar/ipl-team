@@ -6,22 +6,29 @@ import './App.css';
 // import Counter from './React js/conditional/countor';
 
 // import IplTeams from './React js/conditional/iplTeam';
-import CustomTable from './React js/table/table';
-import Country from './React js/countrysapi/countrys';
+import MountingComponent from './React js/mounting/mounting';
+import UpdatingComponent from './React js/updating/upda';
+import Unmounting from './React js/unmounting/unmun';
 
 
 function App() {
   return (
     <div>
-
-      <CustomTable />
+ <MountingComponent myColor={"green"} />
+      
+    
       <br/>
 
 <center>
   <h1>TASK 2</h1>
 </center>
 
-      <Country />
+<UpdatingComponent />
+<br/>
+<center>
+  <h1>TASK 3</h1>
+</center>
+<Unmounting />
 
 
     </div>
@@ -35,11 +42,3 @@ export default App;
 
 
 
-
-//    {/* <IplTeams/> */}
-//       {/* <ConditionalRendering/> */}
-// {/* 
-//       <br /> */}
-//       {/* <SquareComponent/> */}
-//       {/* <br /> */}
-//       {/* <Counter/> */}

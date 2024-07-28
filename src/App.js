@@ -9,28 +9,21 @@ import './App.css';
 // import MountingComponent from './React js/mounting/mounting';
 // import UpdatingComponent from './React js/updating/upda';
 // import Unmounting from './React js/unmounting/unmun';
-import FetchData from './React js/card/card';
+// import FetchData from './React js/card/card';
+
+import RecipeList from './React js/Hooks/recipices';
+import Square from './React js/Hooks/square/sqr';
 
 function App() {
   return (
     <div>
- {/* <MountingComponent myColor={"green"} /> */}
-      <FetchData/>
-    
+ 
+    <RecipeList/>
     
       <br/>
+      <br/>
 
-{/* <center>
-  <h1>TASK 2</h1>
-</center>
-
-<UpdatingComponent />
-<br/>
-<center>
-  <h1>TASK 3</h1>
-</center>
-<Unmounting /> */}
-
+     <Square/>
 
     </div>
   );
@@ -43,3 +36,15 @@ export default App;
 
 
 
+//  {/* <MountingComponent myColor={"green"} /> */}
+//       {/* <FetchData/> */}
+// {/* <center>
+//   <h1>TASK 2</h1>
+// </center>
+
+// <UpdatingComponent />
+// <br/>
+// <center>
+//   <h1>TASK 3</h1>
+// </center>
+// <Unmounting /> */}

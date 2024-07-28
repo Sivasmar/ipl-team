@@ -5,26 +5,41 @@ import './App.css';
 // import ConditionalRendering from './React js/conditional/conditional';
 // import Counter from './React js/conditional/countor';
 
-import IplTeams from './React js/conditional/iplTeam';
+// import IplTeams from './React js/conditional/iplTeam';
+import CustomTable from './React js/table/table';
+import Country from './React js/countrysapi/countrys';
 
 
-const App = () =>{
- return (
-  <div>
+function App() {
+  return (
+    <div>
 
-    <IplTeams/>
-  {/* <ConditionalRendering/> */}
+      <CustomTable />
+      <br/>
 
-  <br/>
-  {/* <SquareComponent/> */}
- <br/>
-   {/* <Counter/> */}
+<center>
+  <h1>TASK 2</h1>
+</center>
 
-  
-     
-  
-  </div>
- )
-};
+      <Country />
+
+
+    </div>
+  );
+}
   
 export default App;
+
+
+
+
+
+
+
+//    {/* <IplTeams/> */}
+//       {/* <ConditionalRendering/> */}
+// {/* 
+//       <br /> */}
+//       {/* <SquareComponent/> */}
+//       {/* <br /> */}
+//       {/* <Counter/> */}

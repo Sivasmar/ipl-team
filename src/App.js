@@ -6,20 +6,21 @@ import './App.css';
 // import Counter from './React js/conditional/countor';
 
 // import IplTeams from './React js/conditional/iplTeam';
-import MountingComponent from './React js/mounting/mounting';
-import UpdatingComponent from './React js/updating/upda';
-import Unmounting from './React js/unmounting/unmun';
-
+// import MountingComponent from './React js/mounting/mounting';
+// import UpdatingComponent from './React js/updating/upda';
+// import Unmounting from './React js/unmounting/unmun';
+import FetchData from './React js/card/card';
 
 function App() {
   return (
     <div>
- <MountingComponent myColor={"green"} />
-      
+ {/* <MountingComponent myColor={"green"} /> */}
+      <FetchData/>
+    
     
       <br/>
 
-<center>
+{/* <center>
   <h1>TASK 2</h1>
 </center>
 
@@ -28,7 +29,7 @@ function App() {
 <center>
   <h1>TASK 3</h1>
 </center>
-<Unmounting />
+<Unmounting /> */}
 
 
     </div>

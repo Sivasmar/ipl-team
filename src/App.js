@@ -11,17 +11,25 @@ import './App.css';
 // import Unmounting from './React js/unmounting/unmun';
 // import FetchData from './React js/card/card';
 
-import Recipe from './React js/classcomp/racipFatch';
+// import Recipe from './React js/classcomp/racipFatch';
 // import Square from './React js/Hooks/square/sqr';
-
+import Registration from './React js/Hooks/forms/reg';
+import Samsung from './React js/Hooks/forms/samsung';
+import UncontrolledTask from './React js/Hooks/forms/uncontroller';
 function App() {
   return (
     <div>
  
-    <Recipe/>
-    
-      
+    {/* <Recipe/> */}
 
+   <center><h1>Task</h1></center>
+    <Registration/>
+
+    <br/>
+    <Samsung/>
+     <br/>
+     <UncontrolledTask/>
+    
      
 
     </div>

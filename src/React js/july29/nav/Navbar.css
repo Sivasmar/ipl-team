@@ -1,0 +1,9 @@
+
+.active{
+    color: rgb(65, 42, 165);
+    
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}

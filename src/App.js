@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import NavigationStack from './React js/navigation/navigation';
 import Navigations from './React js/july29/navigation/navigations';
 // import NavBar from './React js/navbar/navbar';
 // import NavigationStack from './React js/navigation/navigation';
@@ -23,8 +24,9 @@ import Navigations from './React js/july29/navigation/navigations';
 function App() {
   return (
     <div>
+      {/* <Navigations/> */}
     
-    <Navigations/>
+    <NavigationStack/>
 
     {/* //   <Card/> */}
     {/* <NavigationStack/> */}

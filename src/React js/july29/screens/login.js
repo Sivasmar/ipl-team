@@ -2,11 +2,13 @@ import LoginForm from "../login/loginpage";
 import NavigationBar from "../nav/NavBar";
 
 
-const Login=()=>{
+const LoginQ=()=>{
     return(
         <div >
+         
         <NavigationBar/>
         <center>
+            
             <h2>Login Screen</h2>
             <LoginForm/>
         </center>
@@ -14,4 +16,4 @@ const Login=()=>{
         </div>
     )
 }
-export default Login;
+export default LoginQ; 

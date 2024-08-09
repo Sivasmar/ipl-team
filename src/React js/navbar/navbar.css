@@ -1,3 +1,20 @@
 .active{
     color: brown;
 }
+/* navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+  }
+  

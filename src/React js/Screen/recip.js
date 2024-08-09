@@ -1,16 +1,13 @@
 import NavBar from "../navbar/navbar";
 import "./option.css"
-const AboutScreen = () => {
+const RecipeScreen1 = () => {
     return(
         <>
         <NavBar/>
         
-        <h1>Welcome to AboutScreen</h1>
-
-    
-        
+        <h1>Welcome to RecipeScreen</h1>
         </>
     )
 }
 
-export default AboutScreen; 
+export default RecipeScreen1; 

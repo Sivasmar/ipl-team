@@ -1,0 +1,34 @@
+.main1{
+
+    background-color:white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 35px ;
+    width: 350px;
+    text-align: center;
+    overflow: hidden;
+    justify-content: space-evenly;
+    transition: transform 0.2s;
+}
+.main1:hover{
+    transform: scale(1.05);
+}
+.btn1{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    background-color:rgb(65, 156, 208);
+    color:white;
+    text-decoration:none;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}
+.style1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+.btn2{
+    text-decoration: none;
+    background-color: aqua;
+}

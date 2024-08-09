@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 
 const RecipeFinderQ = () => {
   const [recipes, setRecipes] = useState([]);
+  const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -20,6 +22,7 @@ const RecipeFinderQ = () => {
         id: eachRecipe.id,
         recipeName: eachRecipe.name,
       }));
+      console.log(revampData,"hi")
       setRecipes(revampData);
     } catch (error) {
       setError("Failed to fetch recipes");
@@ -28,9 +31,20 @@ const RecipeFinderQ = () => {
     }
   };
 
-  const selectHandler = (event) => {
-    const selectedRecipeId = event.target.value;
-    fetchEachRecipe(selectedRecipeId);
+  const searchHandler = () => {
+    if (searchQuery === "") {
+      setFilteredRecipes([]);
+    } else {
+      const filtered = recipes.filter((recipe) =>
+        recipe.recipeName.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      console.log(filtered ,"hello");
+      
+      setFilteredRecipes(filtered);
+      if (filtered.length > 0) {
+        fetchEachRecipe(filtered[0].id);
+      }
+    }
   };
 
   const fetchEachRecipe = async (recipeId) => {
@@ -48,32 +62,33 @@ const RecipeFinderQ = () => {
 
   return (
     <div style={styles.container}>
-      <h3>Select the recipes</h3>
+      <h3>Search for a recipe</h3>
+      <div style={styles.searchContainer}>
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Search recipes..."
+          style={styles.search}
+        />
+        <button onClick={searchHandler} style={styles.searchButton}>
+          Search
+        </button>
+      </div>
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
-      {recipes.length > 0 ? (
-        <select onChange={selectHandler} style={styles.select}>
-          {recipes.map((each) => (
-            <option value={each.id} key={each.id}>
-              {each.recipeName}
-            </option>
-          ))}
-        </select>
-      ) : (
-        !loading && <h5>No recipes found</h5>
-      )}
-
       {Object.keys(selectedRecipe).length > 0 && !loading && (
         <div style={styles.card}>
           <h4>{selectedRecipe.name}</h4>
           <img src={selectedRecipe.image} width={200} height={200} alt={selectedRecipe.name} />
           <h4>Rating:</h4><p>{selectedRecipe.rating}</p>
-          <h4>Ingredients:</h4><p>{selectedRecipe.ingredients}</p>
-          <h4>Instructions:</h4><p>{selectedRecipe.instructions}</p>
+          {/* <h4>Ingredients:</h4><p>{selectedRecipe.ingredients}</p>
+          <h4>Instructions:</h4><p>{selectedRecipe.instructions}</p> */}
           <h4>Meal Type:</h4><p>{selectedRecipe.mealType}</p>
           <h4>Tags:</h4><p>{selectedRecipe.tags}</p>
         </div>
       )}
+      {!loading && filteredRecipes.length === 0 && searchQuery && <h5>No recipes found</h5>}
     </div>
   );
 };
@@ -85,10 +100,21 @@ const styles = {
     alignItems: 'center',
     padding: '20px',
   },
-  select: {
-    padding: '10px',
+  searchContainer: {
+    display: 'flex',
+    alignItems: 'center',
     marginBottom: '20px',
+  },
+  search: {
+    padding: '10px',
     fontSize: '16px',
+    width: '200px',
+  },
+  searchButton: {
+    padding: '10px 20px',
+    marginLeft: '10px',
+    fontSize: '16px',
+    cursor: 'pointer',
   },
   card: {
     border: '1px solid #ccc',

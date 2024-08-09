@@ -1,11 +1,11 @@
 import NavBar from "../navbar/navbar";
 import "./option.css"
-const AboutScreen = () => {
+const FavouriteScreen = () => {
     return(
         <>
         <NavBar/>
         
-        <h1>Welcome to AboutScreen</h1>
+        <h1>Welcome to FavouriteScreen</h1>
 
     
         
@@ -13,4 +13,4 @@ const AboutScreen = () => {
     )
 }
 
-export default AboutScreen; 
+export default FavouriteScreen; 

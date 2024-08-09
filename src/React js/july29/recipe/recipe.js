@@ -3,7 +3,7 @@ import axios from 'axios'
 import Orderlist from "../list1/list1";
 
 
-const RecipeList=()=>{
+const RecipeListj=()=>{
     const [loader,setLoader]=useState(true)
 
     const [recipe,setRecipe]=useState([])
@@ -91,4 +91,4 @@ const RecipeList=()=>{
         </>
     )
 }
-export default RecipeList;
+export default RecipeListj;
